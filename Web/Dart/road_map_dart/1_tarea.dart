@@ -38,7 +38,7 @@ que tengamos, es como una función global a todo el codigo que trabajemos...
 //*Ejemplo:
 
 void main () { // Esa función que tenemos es un punto de entrada a la apliación que trabajemos, desde aca Dart comienza a ejecutar.
-  print("Hello people");
+  print("¡Hola Dart!");
 }
 
 
@@ -163,9 +163,7 @@ void once() {
   var record = (name: 'Samuel', age: 25); // Definir un registro
   print('Nombre: ${record.name}, Edad: ${record.age}');
 }
-void holaDart() {
-  print("¡Hola, Dart!");
-}
+
 
 
 
