@@ -26,16 +26,71 @@
 */
 //todo: NOTA: Cuando usamos operadores creamos, expresiones dentro del lenguaje.
 void main () {
-{
+{ //? OPERADORES ARITMETRICOS.
+  //Titulo en la terminal.
+  print(" -- -- ARITMETRICOS  -- -- ");
+  print("-------------");
   print("Suma --> + ${2 + 3}");
   print("Resta --> - ${66 - 13}");
   print("Negacion --> -expr -${10}");
-  print("Multiplicar --> *");
-  print("Dividir --> /");
-  print("Dividir devolviendo un entero --> ~/");
-  print("Obtenga el resto de una división entera (módulo) --> %");
+  print("Multiplicar --> * ${10 * 3}");
+  print("Dividir --> / ${2000 / 55}");
+  print("Dividir devolviendo un entero --> ~/ ${10 ~/ 3}");
+  print("Obtenga el resto de una división entera (módulo) --> % ${555 % 33}");
+  print("--------------");
+}
+
+{ //? OPERADORES DE COMPARACIÓN.
+  /**
+** Estos operadores se utilizan para comparar dos valores:
+**Igualdad (==): Devuelve true si los operandos son iguales.
+**Desigualdad (!=): Devuelve true si los operandos son diferentes.
+**Mayor que (>): Devuelve true si el operando de la izquierda es mayor que el de la derecha.
+**Menor que (<): Devuelve true si el operando de la izquierda es menor que el de la derecha.
+**Mayor o igual que (>=): Devuelve true si el operando de la izquierda es mayor o igual al de la derecha.
+**Menor o igual que (<=): Devuelve true si el operando de la izquierda es menor o igual al de la derecha.
+   */
+  print(" -- -- COMPARACIÓN -- -- ");
+  print("------------------");
+  print("Igualdad >> ${55 == 55}");
+  print("No Igual  >> ${44 != 99}");
+  print("Mayor que  >> ${03 > 11} ");
+  print("Menor que  >>  ${ 44 < 90}");
+  print("Mayor o igual  >>  ${ 33 >= 12}");
+  print("Menos o igual  >>  ${6000 <= 2000}");
+  print("---------------");
+}
+
+{//? OPERADORES LOGICOS.
+/**
+ ** Estos operadores se utilizan para realizar operaciones lógicas:
+* * Y lógico (&&): Devuelve true si ambos operandos son verdaderos.
+* * O lógico (||): Devuelve true si al menos uno de los operandos es verdadero.
+**  NO lógico (!): Invierte el valor de verdad del operando.
+ */
+{ //? OPERADORES LOGICOS.
+  /**
+ ** Estos operadores se utilizan para realizar operaciones lógicas:
+* * Y lógico (&&): Devuelve true si ambos operandos son verdaderos.
+* * O lógico (||): Devuelve true si al menos uno de los operandos es verdadero.
+**  NO lógico (!): Invierte el valor de verdad del operando.
+ */
+  print(" -- -- LOGICOS -- -- ");
+  print("------------------");
+
+  void operadoresLogicos() {
+    bool verdadero = true;
+    bool falso = false;
+
+    print("Y logico (&&)  >> ${verdadero && falso}");
+    print("O logico (||)  >> ${verdadero || falso}");
+    print("No logico (!)  >> ${!verdadero}");
+  }
+
+  operadoresLogicos();
+  print("---------------");
+  }
+  }
+}
 
 
-    
-}
-}
