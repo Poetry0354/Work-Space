@@ -62,14 +62,8 @@ void main () {
   print("---------------");
 }
 
-{//? OPERADORES LOGICOS.
-/**
- ** Estos operadores se utilizan para realizar operaciones lógicas:
-* * Y lógico (&&): Devuelve true si ambos operandos son verdaderos.
-* * O lógico (||): Devuelve true si al menos uno de los operandos es verdadero.
-**  NO lógico (!): Invierte el valor de verdad del operando.
- */
-{ //? OPERADORES LOGICOS.
+{
+ //? OPERADORES LOGICOS.
   /**
  ** Estos operadores se utilizan para realizar operaciones lógicas:
 * * Y lógico (&&): Devuelve true si ambos operandos son verdaderos.
@@ -91,7 +85,54 @@ void main () {
   operadoresLogicos();
   print("---------------");
   }
+
+  { //? OPERADORES DE ASIGNACION.
+    //Nosotros podemos asignar valores con "=", haceindo que la variable tome al valor que le asigamos, sin importar si ya tenia otro.
+    //* Pero cuando a la variable es nula tenemos que usar "??=", es este caso solo vamos asigar si es nula, si no, no.
+
+    print("-------------------------");
+    print(" -- -- ASIGNACION -- -- ");
+    print("--------------------------");
+    int? a;
+    int? b = 10;
+
+    a ??= 5; // a es null, entonces se le asigna 5
+    b ??= 20; // b ya tiene el valor 10, por lo que no se cambia
+
+    //NOTE: Ademas de esos, tenemos los de asignacion compuesta que van en conjunto con los anteriores. (Especial "=").
+    /* 
+    * Asignación simple (=): Asigna el valor del operando de la derecha al operando de la izquierda.
+    * Suma y asignación (+=): Suma el valor del operando de la derecha al operando de la izquierda y asigna el resultado.
+    * Resta y asignación (-=): Resta el valor del operando de la derecha al operando de la izquierda y asigna el resultado.
+    * Multiplicación y asignación (*=): Multiplica el valor del operando de la derecha al operando de la izquierda y asigna el resultado.
+    * División y asignación (/=): Divide el valor del operando de la izquierda por el operando de la derecha y asigna el resultado.
+    * División entera y asignación (~/=): Realiza una división entera y asigna el resultado.
+    * Módulo y asignación (%=): Calcula el módulo y asigna el resultado.
+    */
+
+    void operadoresDeAsignacionCompuesta() {
+    int numero = 10;
+
+    numero += 5; // numero = numero + 5 (numero ahora es 15)
+    numero -= 3; // numero = numero - 3 (numero ahora es 12)
+    numero *= 2; // numero = numero * 2 (numero ahora es 24)
+    numero ~/= 4; // numero = numero ~/ 4 (numero ahora es 6)
+    numero %= 3; // numero = numero % 3 (numero ahora es 0)
+
+    print("El valor final de numero es: $numero");
+  }
+
+  operadoresDeAsignacionCompuesta();
+  }
+
+  { //? OPERADORES BIT A BIT.
+  /* 
+  
+  */
+
   }
 }
+
+
 
 
