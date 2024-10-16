@@ -17,6 +17,10 @@
  * Seguro que al revisar detenidamente las posibilidades has descubierto algo nuevo.
  */
 //! DESAROOLLO.
+import 'dart:async';
+
+import '1_tarea.dart';
+
 /** 
  * Antes... Ten en cuenta lo siguiente...
  * En dart al igual que en otros lenguajes, hay precedencia de operadores, es como una jerarquia de estos,
@@ -127,10 +131,136 @@ void main () {
 
   { //? OPERADORES BIT A BIT.
   /* 
-  
+  Te acuerdas de los puertos en la electronica?, como ADN o XOR? asi mismo funcionan estos operadores logicos.
+  * Concepto:
+  * En un lenguaje de programación, los operadores bit a bit (también conocidos como operadores bitwise) son primitivas lógicas que permiten manipular los bits individuales 
+  * de un número entero. Estos operadores se utilizan para realizar operaciones lógicas y aritméticas sobre los bits de un valor, lo que es útil en muchos casos, como:
+
+  * Mascarado: filtrar o seleccionar bits específicos de un valor.
+  * Inversión: invertir el valor de un bit o una serie de bits.
+  * Combinación: combinar los valores de dos o más bits en un solo bit.
+  * Comparación: comparar los valores de dos o más bits.
+
+  En dart  tenemos los siguientes: 
+  & (AND bit a bit): Realiza una operación AND bit a bit. Ejemplo: 5 & 3 da 1.
+| (OR bit a bit): Realiza una operación OR bit a bit. Ejemplo: 5 | 3 da 7.
+^ (XOR bit a bit): Realiza una operación XOR bit a bit. Ejemplo: 5 ^ 3 da 6.
+~ (Complemento bit a bit): Invierte los bits del número. Ejemplo: ~5 da -6.
+<< (Desplazamiento a la izquierda): Desplaza los bits a la izquierda. Ejemplo: 5 << 2 da 20.
+>> (Desplazamiento a la derecha): Desplaza los bits a la derecha. Ejemplo: 5 >> 2 da 1.
+>>> El operador >>> realiza un desplazamiento a la derecha de los bits del número, pero sin preservar el signo. Esto significa que los bits de la izquierda se rellenan 
+    con ceros, en lugar de copiar el bit del signo. Es útil cuando se trabaja con números sin signo o se desea manipular bits de forma explícita.
   */
 
+    void operadoresBitABit() {
+    int a = 5;
+    int b = 3;
+
+    print("----------------");
+    print("-- BIT A BIT --");
+    print("---------------");
+
+    print("AND bit a bit (&): ${a & b}"); // 1
+    print("OR bit a bit (|): ${a | b}"); // 7
+    print("XOR bit a bit (^): ${a ^ b}"); // 6
+    print("Complemento bit a bit (~): ${~a}"); // -6
+    print("Desplazamiento a la izquierda (<<): ${a << 2}"); // 20
+    print("Desplazamiento a la derecha (>>): ${a >> 2}"); // 1
+    print("Desplazamiento a la derecha sin signo (>>>): ${a >>> 2}"); // 1
   }
+
+  operadoresBitABit();
+  }
+
+  { //? OPERADORES DE PRUEBA.
+
+  /*
+  Estos son utiles en tiempo de ejecución del programa / aplicación, para verificar tipos...
+  Tenemos tres:
+      * as : Convierte un objeto a un tipo especifico.
+      * is : Comprueba si un objeto es de un tiempo especifico.
+      * is! : Verifica que no sea de un tiempo especifico.
+   */
+    print("-----------------");
+    print("---DE PRUEBA----");
+    print("------------------");
+
+
+    void operadoresDePrueba() {
+    dynamic objeto = "Hola";
+
+    if (objeto is String) {
+      print("El objeto es una cadena: $objeto");
+    }
+
+    if (objeto is! int) {
+      print("El objeto no es un entero");
+    }
+
+    try {
+      String cadena = objeto as String;
+      print("La cadena es: $cadena");
+    } catch (e) {
+      print("Error al convertir el objeto a una cadena: $e");
+    }
+  }
+
+  operadoresDePrueba();
+  }
+
+  {//? OPERADORES CONDICIONALES.
+
+  /* 
+  En dart al igual que en JS (Recientemente), tenemos operadores que que nos permiten evaluar expresiones de una manera más compacta en comparación a las estructuras
+  If - Else. 
+
+    * Tenemos el operador ternario (condition ? expr1 : expr2): Es como una alternativa a if - else.
+      condition: Es una expresión booleana que evalúa a true o false.
+      expr1: Es la expresión que se evalúa y cuyo valor se devuelve si condition es true.
+      expr2: Es la expresión que se evalúa y cuyo valor se devuelve si condition es false.
+    
+    todo: Es bueno cuando queremos verificar una expresión simple que solo requeria devolver un valor, esto se puede hacer en una sola linea de codigo... 
+    ! Para casos donde es más complejo, es mejor usar las estructuras de control para que se mantenga legible el codigo. Para logica más compleja.
+  */
+
+  // * condition ? expr1 : expr2
+  var isPublic = true;
+  var visibility = isPublic ? 'public' : 'private'; //! Si es verdadera entonces visibility se establece en "public" si no, en "private".
+
+    /* 
+      * Tenemos el operador de coalescencia nula (expre1 ?? expre2). Para verificar si la expresión es nula o no (null).
+      expr1 ?? expr2.
+      Si expr1 no es null, devuelve su valor.
+      Si expr1 es null, evalúa y devuelve el valor de expr2.
+    */
+
+    var name = null;
+    String playerName(String? name) => name ?? 'Guest';
+    /* 
+    La función playerName toma un parámetro name que puede ser null.
+    Si name tiene un valor no nulo, la función devuelve ese valor.
+    Si name es null, la función devuelve 'Guest'.
+    */
+
+
+    print("--------");
+    print("--- CONDICIONALES---");
+    print("----------------");
+
+      void funcionConOperadoresCondicionales() {
+    int edad = 20;
+    String mensaje = (edad >= 18) ? 'Eres mayor de edad' : 'Eres menor de edad';
+    print(mensaje);
+
+    String? nombre = "Anny Wife";
+    String nombreUsuario = nombre ?? 'Invitado';
+    print('El nombre del usuario es: $nombreUsuario');
+  }
+
+  funcionConOperadoresCondicionales();
+  }
+
+  
 }
 
 
