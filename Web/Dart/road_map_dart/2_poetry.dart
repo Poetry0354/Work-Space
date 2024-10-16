@@ -3,7 +3,7 @@
  * - Crea ejemplos utilizando todos los tipos de operadores de tu lenguaje:
  *   Aritméticos, lógicos, de comparación, asignación, identidad, pertenencia, bits...
  *   (Ten en cuenta que cada lenguaje puede poseer unos diferentes).
-?     PROCESO.
+! Termi
  * - Utilizando las operaciones con operadores que tú quieras, crea ejemplos
  *   que representen todos los tipos de estructuras de control que existan
  *   en tu lenguaje:
@@ -16,10 +16,9 @@
  *
  * Seguro que al revisar detenidamente las posibilidades has descubierto algo nuevo.
  */
-//! DESAROOLLO.
-import 'dart:async';
 
-import '1_tarea.dart';
+import '2_estructuras_de_control.dart';
+//! DESAROOLLO.
 
 /** 
  * Antes... Ten en cuenta lo siguiente...
@@ -260,9 +259,46 @@ void main () {
   funcionConOperadoresCondicionales();
   }
 
+  {//? NOTACIÓN EN CASCADA
+
+    /* 
+    Actua como un map o un objeto en javascript, esto nos permite es hacer secuencia de operaciones en un solo objeto, accediendo
+    a sus intancias. Esto nos ayuda en que no tenemos que repetir el nombre de la variable muchas veces. Esto a menudo nos evita el proceso
+    de crear variables temporales. 
+    todo: Es particularmente util cuando nesecitamos configurar muchas propiedades en un objeto o llamar multiples metodos.
+    todo: Mirar clases por fuera del main.
+    */
+
+    print("-----------");
+    print("--- CASCADA ---");
+    print("--------------");
+
+
+    var persona = Persona()
+    ..nombre = 'Samuel'
+    ..direccion.calle = 'Calle 123'
+    ..direccion.ciudad = 'Ciudad Ejemplo';
+
+  print('Nombre: ${persona.nombre}');
+  print('Dirección: ${persona.direccion.calle}, ${persona.direccion.ciudad}');
+
+  //* Se pueden anidar otros dentro del mismo :D... Tambien se puede trabajar con Null si lo nesecitamos, accediendo a esas intancias. Cambiando si son nullas, si no, no cambian.
+
+  }
   
+  estructurasDeControl();
+
 }
 
+class Direccion {
+  String calle = '';
+  String ciudad = '';
+}
+
+class Persona {
+  String nombre = '';
+  Direccion direccion = Direccion();
+}
 
 
 
