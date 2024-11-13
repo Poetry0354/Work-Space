@@ -53,4 +53,19 @@ void estructurasDeControl () {
   print("--- Swicht ----");
   print("-------------");
   caso_tres();
+  
+  //TODO: Bucless...
+  //for
+  for (int i = 0; i < 10; i++) {
+  print("Este es el bucle for = $i"); //En este caso el bucle for, es para interar un número determinado de veces, mientras la condicipon sea True...
+  } 
+  //For-in
+  var numbers = [1,2,3];
+  for (var number in numbers) {
+    print('')
+  }
+
+
+  
+
 }
