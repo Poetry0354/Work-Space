@@ -60,12 +60,6 @@ void estructurasDeControl () {
   print("Este es el bucle for = $i"); //En este caso el bucle for, es para interar un número determinado de veces, mientras la condicipon sea True...
   } 
   //For-in
-  var numbers = [1,2,3];
-  for (var number in numbers) {
-    print('')
-  }
-
-
   
 
 }

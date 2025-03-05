@@ -163,9 +163,3 @@ void once() {
   var record = (name: 'Samuel', age: 25); // Definir un registro
   print('Nombre: ${record.name}, Edad: ${record.age}');
 }
-
-
-
-
-
-
