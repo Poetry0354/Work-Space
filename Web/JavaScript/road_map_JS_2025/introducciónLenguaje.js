@@ -91,3 +91,33 @@ let usuario = {
 };
 
 console.log(usuario[idUnico]); // Imprimirá "12345"
+
+// Otro que es nuevo y especial es BigInt, que permite trabajar con enteros de gran tamaño.
+/*
+ * BigInt es un tipo de dato que se usa para Claro. Trabajar con números enteros muy grandes,
+ * más allá del límite de los números enteros normales (`Number.MAX_SAFE_INTEGER`, que es 2^53 - 1).
+ * * Se representa con el sufijo `n` al final del número o con el constructor `BigInt()`.
+ * Segun la documentación estos no se pueden trabajar con Math dentro de JS y no puede ser mezclado con Numbers normales.
+ * en operaciones, para hacerlo tiene que ser convertidos al mismo tipo (Esto ultimo no se recomienda hacerlo muchas veces ya que se pierde presición)
+ * */
+
+const grande = 1234567890123456789012345678901234567890n;
+const otro = BigInt("9007199254740993");
+
+const suma = grande + otro; // OK
+
+const num = 10;
+// const error = grande + num; // Error: no se puede mezclar BigInt y Number
+
+const correcto = grande + BigInt(num); // OK
+
+// Por ultimo, los objetos son estructuras que pueden contener múltiples valores y propiedades.
+// Los objetos son una parte fundamental de JavaScript y se utilizan para agrupar datos relacionados.
+// Pueden contener propiedades (atributos) y métodos (funciones asociadas al objeto).
+// Se definen utilizando llaves `{}` y pueden contener pares clave-valor.
+let persona = {
+  nombre: "Diego",
+  edad: 20,
+  estatura: 1.7,
+  esEstudiante: true,
+};
