@@ -1,12 +1,22 @@
-# DESARROLLO WEB.
-En esta carpeta es donde estara todo lo relacionado al desarrollo web, aplicaciones web, datos, seguridad, cloud y hasta proyectos que entren dentro de este rubro.
+# 🚀 Desarrollo Web
 
-# Lenguajes (Actualizado 10/10/2024).
- * JavaScript 
- * Dart
+Bienvenido a la carpeta de proyectos de desarrollo web. Aquí encontrarás recursos, ideas y proyectos relacionados con aplicaciones web, datos, seguridad y cloud computing.
 
-# Proyectos ¡Planeados!.
- * Sitio web (Hermano).
- * Pomodoro (Flutter).
- * Porfolio (Versión Mejorada).
- * Inventario (Vivero).
+---
+
+## 🛠️ Lenguaje principal
+
+- **JavaScript**
+
+---
+
+## 📋 Proyectos planeados
+
+- 🌐 Sitio web (Hermano)
+- ⏲️ Pomodoro (Flutter)
+- 💼 Portafolio (versión mejorada)
+- 🍽️ Restaurante Rancho
+
+---
+
+¡Sigue atento para más actualizaciones y nuevos proyectos!
