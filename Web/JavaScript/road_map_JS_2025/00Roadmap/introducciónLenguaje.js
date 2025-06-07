@@ -120,4 +120,37 @@ let persona = {
   edad: 20,
   estatura: 1.7,
   esEstudiante: true,
+  direccion: {
+    ciudad: "Madrid",
+    pais: "España", // para acceder a un dato del objeto podemos usar console.log(persona.edad)
+  },
+  saludar: function() {
+    console.log(`¡Hola, soy ${this.nombre}!`);
+  },
 };
+
+/* 
+ * El método bind se usa cuando quieres extraer un método de un objeto y asegurarte de que this siga apuntando al objeto original, incluso si lo llamas fuera de su contexto.
+
+Por ejemplo, si haces esto:
+
+```javascript
+const saludo = persona.saludar;
+saludo(); // this.nombre será undefined
+```
+
+Aquí, this ya no apunta a persona, así que no funciona como esperas.
+
+Para solucionarlo, usas bind:
+
+```javascript
+const saludo = persona.saludar.bind(persona);
+saludo(); // ¡Hola, soy Diego!
+```
+
+Usa bind cuando:
+- Asignas el método a una variable.
+- Pasas el método como callback (por ejemplo, a setTimeout o a un evento).
+- Quieres asegurarte de que this siempre apunte al objeto original, sin importar dónde se llame la función.
+
+ * */
