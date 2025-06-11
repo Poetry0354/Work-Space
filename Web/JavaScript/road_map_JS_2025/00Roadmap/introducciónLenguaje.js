@@ -1,7 +1,7 @@
 /* La idea de este Roadmap es que desarrollemos las habilidades necesarias dentro del lenguaje seleccionado y la logica en si misma.
  * EJERCICIO:
  * - Crea un comentario en el código y coloca la URL del sitio web oficial del
- *   lenguaje de programación que has seleccionado.
+*   lenguaje de programación que has seleccionado.
  * - Representa las diferentes sintaxis que existen de crear comentarios
  *   en el lenguaje (en una línea, varias...).
  * - Crea una variable (y una constante si el lenguaje lo soporta).
@@ -11,7 +11,6 @@
  *
  * ¿Fácil? No te preocupes, recuerda que esta es una ruta de estudio y
  * debemos comenzar por el principio.
- */
 
 // Sitio web oficial de JavaScript: https://developer.mozilla.org/es/docs/Web/JavaScript
 
@@ -124,7 +123,7 @@ let persona = {
     ciudad: "Madrid",
     pais: "España", // para acceder a un dato del objeto podemos usar console.log(persona.edad)
   },
-  saludar: function() {
+  saludar: function () {
     console.log(`¡Hola, soy ${this.nombre}!`);
   },
 };
