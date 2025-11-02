@@ -33,7 +33,7 @@ que es exactamente este comentario SJSJS, que es más de una linea
 
 string = "Hola Soy un String"
 
-string2 = 2
+string2 = 2 # Aca realmente es una variable de tipo entero, aunque su nombre sea string
 
 """
 En Python, no hay constantes como tal, los desarrolladores usan una convencion para indicar que esa variable "es una constante".
