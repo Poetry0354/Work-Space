@@ -6,6 +6,17 @@ Este repositorio privado es mi laboratorio personal dedicado al aprendizaje cont
 
 ---
 
+## 🗺️ Tabla de Contenidos
+
+Aquí encontrarás las rutas de aprendizaje y práctica para cada área principal.
+
+- **[🚀 Frontend](./frontend/javascript)**: Todo lo relacionado con el desarrollo del lado del cliente.
+  - JavaScript
+- **[🔧 Backend](./backend/python)**: Lógica del servidor, APIs y bases de datos.
+  - Python
+
+---
+
 ## 🎯 Objetivos Principales
 
 - **Dominar la Lógica de Programación**: Desarrollar un pensamiento algorítmico robusto y habilidades de resolución de problemas.
